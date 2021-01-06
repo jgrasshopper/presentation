@@ -1,0 +1,137 @@
+/* CSS Variables */
+:root {
+  --page-1-color: steelblue;
+  --page-2-color: tan;
+  --page-3-color: teal;
+  --page-4-color: slateblue;
+  --animate-speed: 2s;
+}
+
+/* Main Styling */
+body {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Page Colors */
+#page-1 { background-color: var(--page-1-color); }
+#page-2 { background-color: var(--page-2-color); }
+#page-3 { background-color: var(--page-3-color); }
+#page-4 { background-color: var(--page-4-color); }
+
+.page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  padding: 0 4rem;
+  text-align: center;
+}
+
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+
+.page p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  background: #f4f4f4;
+  border: none;
+  color: #333;
+  display: inline-block;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  transition: background, color 0.3s ease-in;
+}
+
+.btn:hover,
+.btn-dark {
+  background: #333;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background: #f4f4f4;
+  color: #333;
+}
+
+/* Animation | My Solution */
+#page-1 h1 {
+  animation: animate1 var(--animate-speed) forwards ease-in;
+  transform: translateY(-1200px);
+}
+
+#page-1 p {
+  animation: animate2 var(--animate-speed) forwards 2s;
+  transform: translateX(-1800px);
+}
+
+#page-1 .btn {
+  animation: animate3 var(--animate-speed) forwards 3s;
+  transform: translateY(1200px);
+}
+
+/* Keyframes Rules */
+@keyframes animate1 {
+  55% {
+    transform: translateY(-10px);
+  }
+
+  70% {
+    transform: translateY(0);
+  }
+
+  85% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes animate2 {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animate3 {
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Page Animation | Solution */
+/* #page-1 h1 {
+  animation: heading var(--animate-speed) forwards ease-in;
+  transform: translateY(-1200px);
+}
+
+#page-1 p {
+  animation: text var(--animate-speed) forwards ease-in 1s;
+  transform: translateX(-1800px);
+} */
+
+/* Keyframes */
+/* @keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes text {
+  to {
+    transform: translateX(0);
+  }
+} */
