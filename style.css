@@ -65,7 +65,7 @@ body {
   color: #333;
 }
 
-/* Animation | My Solution */
+/* Page Animation | My Solution */
 #page-1 h1 {
   animation: animate1 var(--animate-speed) forwards ease-in;
   transform: translateY(-1200px);
@@ -135,3 +135,18 @@ body {
     transform: translateX(0);
   }
 } */
+
+/* Media Queries */
+@media(max-width: 500px) {
+  .page h1 {
+    font-size: 3rem;
+  }
+
+  .page p {
+    font-size: 1.2rem;
+  }
+
+  .btn-dark {
+    margin-bottom: 1rem;
+  }
+}
