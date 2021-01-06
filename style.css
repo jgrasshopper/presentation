@@ -83,6 +83,10 @@ body {
 
 /* Keyframes Rules */
 @keyframes animate1 {
+  40% {
+    transform: translateY(0);
+  }
+  
   55% {
     transform: translateY(-10px);
   }
