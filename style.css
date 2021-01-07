@@ -143,11 +143,13 @@ body {
 /* Media Queries */
 @media(max-width: 500px) {
   .page h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin: 3rem 1rem 1rem;
   }
 
   .page p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .btn-dark {
